@@ -166,3 +166,6 @@ def download(filename: str):
 from pathlib import Path
 static_path = Path(__file__).parent.parent / "frontend-dist"
 app.mount("/", StaticFiles(directory=static_path, html=True), name="static")
+
+print("📦 Serving static from:", static_path)
+print("🧾 Index file exists:", (static_path / "index.html").exists())
